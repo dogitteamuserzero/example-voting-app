@@ -1,0 +1,142 @@
+2023-04-12 11:13:15,624 p=18642 u=vagrant n=ansible | playbook: votingapp-container-setup.yml
+2023-04-12 11:13:38,233 p=18666 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 11:13:38,250 p=18666 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 11:13:42,391 p=18666 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:13:42,425 p=18666 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 11:13:42,446 p=18666 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"msg": "Attempting to decrypt but no vault secrets found"}
+2023-04-12 11:13:42,449 p=18666 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 11:13:42,449 p=18666 u=vagrant n=ansible | appserver                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-12 11:46:27,910 p=18708 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 11:46:27,919 p=18708 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 11:46:31,602 p=18708 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:46:31,634 p=18708 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 11:46:31,669 p=18708 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:46:31,688 p=18708 u=vagrant n=ansible | TASK [Create remote temp dir] ***************************************************************************************************************************************************************
+2023-04-12 11:46:31,963 p=18708 u=vagrant n=ansible | changed: [appserver]
+2023-04-12 11:46:31,985 p=18708 u=vagrant n=ansible | TASK [Copy Docker Compose files] ************************************************************************************************************************************************************
+2023-04-12 11:46:32,459 p=18708 u=vagrant n=ansible | changed: [appserver]
+2023-04-12 11:46:32,479 p=18708 u=vagrant n=ansible | TASK [Stop all docker containers] ***********************************************************************************************************************************************************
+2023-04-12 11:46:32,745 p=18708 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.command) module: ignore_errors, tags. Supported parameters include: chdir, removes, stdin_add_newline, strip_empty_ends, warn, creates, argv, _uses_shell, _raw_params, stdin, executable."}
+2023-04-12 11:46:32,747 p=18708 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 11:46:32,747 p=18708 u=vagrant n=ansible | appserver                  : ok=4    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-12 11:54:58,303 p=18844 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 11:54:58,312 p=18844 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 11:55:01,683 p=18844 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:01,716 p=18844 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 11:55:01,748 p=18844 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:01,767 p=18844 u=vagrant n=ansible | TASK [Create remote temp dir] ***************************************************************************************************************************************************************
+2023-04-12 11:55:02,012 p=18844 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:02,031 p=18844 u=vagrant n=ansible | TASK [Copy Docker Compose files] ************************************************************************************************************************************************************
+2023-04-12 11:55:02,442 p=18844 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:02,459 p=18844 u=vagrant n=ansible | TASK [Stop all docker containers] ***********************************************************************************************************************************************************
+2023-04-12 11:55:02,718 p=18844 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.command) module: tags. Supported parameters include: stdin, _raw_params, warn, argv, removes, creates, stdin_add_newline, _uses_shell, executable, chdir, strip_empty_ends."}
+2023-04-12 11:55:02,720 p=18844 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 11:55:02,720 p=18844 u=vagrant n=ansible | appserver                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-12 11:55:27,301 p=18931 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 11:55:27,310 p=18931 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 11:55:30,378 p=18931 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:30,411 p=18931 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 11:55:30,445 p=18931 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:30,466 p=18931 u=vagrant n=ansible | TASK [Create remote temp dir] ***************************************************************************************************************************************************************
+2023-04-12 11:55:30,729 p=18931 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:30,748 p=18931 u=vagrant n=ansible | TASK [Copy Docker Compose files] ************************************************************************************************************************************************************
+2023-04-12 11:55:31,125 p=18931 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:55:31,144 p=18931 u=vagrant n=ansible | TASK [Stop all docker containers] ***********************************************************************************************************************************************************
+2023-04-12 11:55:31,498 p=18931 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": true, "cmd": "docker stop $(docker ps -q)", "delta": "0:00:00.076758", "end": "2023-04-12 11:55:31.478259", "msg": "non-zero return code", "rc": 1, "start": "2023-04-12 11:55:31.401501", "stderr": "\"docker stop\" requires at least 1 argument.\nSee 'docker stop --help'.\n\nUsage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]\n\nStop one or more running containers", "stderr_lines": ["\"docker stop\" requires at least 1 argument.", "See 'docker stop --help'.", "", "Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]", "", "Stop one or more running containers"], "stdout": "", "stdout_lines": []}
+2023-04-12 11:55:31,501 p=18931 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 11:55:31,502 p=18931 u=vagrant n=ansible | appserver                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-12 11:57:41,150 p=19016 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 11:57:41,159 p=19016 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 11:57:44,627 p=19016 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:57:44,659 p=19016 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 11:57:44,693 p=19016 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:57:44,711 p=19016 u=vagrant n=ansible | TASK [Create remote temp dir] ***************************************************************************************************************************************************************
+2023-04-12 11:57:44,990 p=19016 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:57:45,009 p=19016 u=vagrant n=ansible | TASK [Copy Docker Compose files] ************************************************************************************************************************************************************
+2023-04-12 11:57:45,429 p=19016 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 11:57:45,447 p=19016 u=vagrant n=ansible | TASK [Stop all docker containers] ***********************************************************************************************************************************************************
+2023-04-12 11:57:45,705 p=19016 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.command) module: ignore_errors, tags. Supported parameters include: removes, stdin, _raw_params, _uses_shell, executable, argv, strip_empty_ends, stdin_add_newline, chdir, creates, warn."}
+2023-04-12 11:57:45,709 p=19016 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 11:57:45,710 p=19016 u=vagrant n=ansible | appserver                  : ok=4    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2023-04-12 11:59:26,823 p=19103 u=vagrant n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/home/vagrant/example-voting-app/ansible/votingapp-container-setup.yml': line 26, column 9, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+          cmd: docker stop $(docker ps -q)
+        ignore_errors: true
+        ^ here
+
+2023-04-12 12:00:05,391 p=19109 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 12:00:05,400 p=19109 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 12:00:08,917 p=19109 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:00:08,949 p=19109 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 12:00:08,984 p=19109 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:00:09,002 p=19109 u=vagrant n=ansible | TASK [Create remote temp dir] ***************************************************************************************************************************************************************
+2023-04-12 12:00:09,272 p=19109 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:00:09,291 p=19109 u=vagrant n=ansible | TASK [Copy Docker Compose files] ************************************************************************************************************************************************************
+2023-04-12 12:00:09,685 p=19109 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:00:09,705 p=19109 u=vagrant n=ansible | TASK [Stop all docker containers] ***********************************************************************************************************************************************************
+2023-04-12 12:00:10,037 p=19109 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": true, "cmd": "docker stop $(docker ps -q)", "delta": "0:00:00.071570", "end": "2023-04-12 12:00:10.018824", "msg": "non-zero return code", "rc": 1, "start": "2023-04-12 12:00:09.947254", "stderr": "\"docker stop\" requires at least 1 argument.\nSee 'docker stop --help'.\n\nUsage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]\n\nStop one or more running containers", "stderr_lines": ["\"docker stop\" requires at least 1 argument.", "See 'docker stop --help'.", "", "Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]", "", "Stop one or more running containers"], "stdout": "", "stdout_lines": []}
+2023-04-12 12:00:10,037 p=19109 u=vagrant n=ansible | ...ignoring
+2023-04-12 12:00:10,056 p=19109 u=vagrant n=ansible | TASK [Remove all unused and dangling docker images] *****************************************************************************************************************************************
+2023-04-12 12:00:10,235 p=19109 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (ansible.legacy.command) module: tags. Supported parameters include: removes, stdin_add_newline, _uses_shell, stdin, argv, warn, strip_empty_ends, _raw_params, creates, executable, chdir."}
+2023-04-12 12:00:10,236 p=19109 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 12:00:10,236 p=19109 u=vagrant n=ansible | appserver                  : ok=5    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2023-04-12 12:01:24,423 p=19212 u=vagrant n=ansible | ERROR! conflicting action statements: shell, chdir
+
+The error appears to be in '/home/vagrant/example-voting-app/ansible/votingapp-container-setup.yml': line 36, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: Setup with docker-compose
+      ^ here
+
+2023-04-12 12:02:19,539 p=19217 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 12:02:19,549 p=19217 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 12:02:22,979 p=19217 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:02:23,017 p=19217 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 12:02:23,052 p=19217 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:02:23,072 p=19217 u=vagrant n=ansible | TASK [Create remote temp dir] ***************************************************************************************************************************************************************
+2023-04-12 12:02:23,323 p=19217 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:02:23,341 p=19217 u=vagrant n=ansible | TASK [Copy Docker Compose files] ************************************************************************************************************************************************************
+2023-04-12 12:02:23,739 p=19217 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:02:23,759 p=19217 u=vagrant n=ansible | TASK [Stop all docker containers] ***********************************************************************************************************************************************************
+2023-04-12 12:02:24,105 p=19217 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": true, "cmd": "docker stop $(docker ps -q)", "delta": "0:00:00.084636", "end": "2023-04-12 12:02:24.086093", "msg": "non-zero return code", "rc": 1, "start": "2023-04-12 12:02:24.001457", "stderr": "\"docker stop\" requires at least 1 argument.\nSee 'docker stop --help'.\n\nUsage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]\n\nStop one or more running containers", "stderr_lines": ["\"docker stop\" requires at least 1 argument.", "See 'docker stop --help'.", "", "Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]", "", "Stop one or more running containers"], "stdout": "", "stdout_lines": []}
+2023-04-12 12:02:24,105 p=19217 u=vagrant n=ansible | ...ignoring
+2023-04-12 12:02:24,125 p=19217 u=vagrant n=ansible | TASK [Remove all unused and dangling docker images] *****************************************************************************************************************************************
+2023-04-12 12:02:24,365 p=19217 u=vagrant n=ansible | changed: [appserver]
+2023-04-12 12:02:24,383 p=19217 u=vagrant n=ansible | TASK [Setup with docker-compose] ************************************************************************************************************************************************************
+2023-04-12 12:02:24,992 p=19217 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": true, "cmd": "docker-compose up -d", "delta": "0:00:00.430045", "end": "2023-04-12 12:02:24.971542", "msg": "non-zero return code", "rc": 1, "start": "2023-04-12 12:02:24.541497", "stderr": "Version \"v2\" in \"./docker-compose.yml\" is invalid.", "stderr_lines": ["Version \"v2\" in \"./docker-compose.yml\" is invalid."], "stdout": "", "stdout_lines": []}
+2023-04-12 12:02:24,994 p=19217 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 12:02:24,994 p=19217 u=vagrant n=ansible | appserver                  : ok=6    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=1   
+2023-04-12 12:09:09,132 p=19361 u=vagrant n=ansible | PLAY [Deploy containers] ********************************************************************************************************************************************************************
+2023-04-12 12:09:09,141 p=19361 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************
+2023-04-12 12:09:12,531 p=19361 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:09:12,563 p=19361 u=vagrant n=ansible | TASK [Include vars] *************************************************************************************************************************************************************************
+2023-04-12 12:09:12,595 p=19361 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:09:12,614 p=19361 u=vagrant n=ansible | TASK [Create remote temp dir] ***************************************************************************************************************************************************************
+2023-04-12 12:09:12,861 p=19361 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:09:12,879 p=19361 u=vagrant n=ansible | TASK [Copy Docker Compose files] ************************************************************************************************************************************************************
+2023-04-12 12:09:13,276 p=19361 u=vagrant n=ansible | ok: [appserver]
+2023-04-12 12:09:13,300 p=19361 u=vagrant n=ansible | TASK [Stop all docker containers] ***********************************************************************************************************************************************************
+2023-04-12 12:09:13,630 p=19361 u=vagrant n=ansible | fatal: [appserver]: FAILED! => {"changed": true, "cmd": "docker stop $(docker ps -q)", "delta": "0:00:00.071126", "end": "2023-04-12 12:09:13.611919", "msg": "non-zero return code", "rc": 1, "start": "2023-04-12 12:09:13.540793", "stderr": "\"docker stop\" requires at least 1 argument.\nSee 'docker stop --help'.\n\nUsage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]\n\nStop one or more running containers", "stderr_lines": ["\"docker stop\" requires at least 1 argument.", "See 'docker stop --help'.", "", "Usage:  docker stop [OPTIONS] CONTAINER [CONTAINER...]", "", "Stop one or more running containers"], "stdout": "", "stdout_lines": []}
+2023-04-12 12:09:13,630 p=19361 u=vagrant n=ansible | ...ignoring
+2023-04-12 12:09:13,651 p=19361 u=vagrant n=ansible | TASK [Remove all unused and dangling docker images] *****************************************************************************************************************************************
+2023-04-12 12:09:13,891 p=19361 u=vagrant n=ansible | changed: [appserver]
+2023-04-12 12:09:13,912 p=19361 u=vagrant n=ansible | TASK [Setup with docker-compose] ************************************************************************************************************************************************************
+2023-04-12 12:09:57,608 p=19361 u=vagrant n=ansible | changed: [appserver]
+2023-04-12 12:09:57,632 p=19361 u=vagrant n=ansible | TASK [Display result] ***********************************************************************************************************************************************************************
+2023-04-12 12:09:57,659 p=19361 u=vagrant n=ansible | ok: [appserver] => {
+    "msg": "Log from docker-compose: \n \n"
+}
+2023-04-12 12:09:57,704 p=19361 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************
+2023-04-12 12:09:57,705 p=19361 u=vagrant n=ansible | appserver                  : ok=8    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=1   
