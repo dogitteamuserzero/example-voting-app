@@ -5,6 +5,8 @@ services:
     image: {{DOCKER_REGISTRY_HOST}}/{{DOCKER_IMAGE_VOTE}}:{{DOCKER_IMAGE_VERSION}}
     ports:
       - "5000:80"
+    depends_on:
+      - redis
     networks:
       - front-tier
       - back-tier
@@ -13,12 +15,17 @@ services:
     image: {{DOCKER_REGISTRY_HOST}}/{{DOCKER_IMAGE_RESULT}}:{{DOCKER_IMAGE_VERSION}}
     ports:
       - "5001:80"
+    depends_on:
+      - db
     networks:
       - front-tier
       - back-tier
 
   worker:
     image: {{DOCKER_REGISTRY_HOST}}/{{DOCKER_IMAGE_WORKER}}:{{DOCKER_IMAGE_VERSION}}
+    depends_on:
+      - redis
+      - db
     networks:
       - back-tier
 
