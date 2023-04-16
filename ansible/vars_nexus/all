@@ -1,0 +1,7 @@
+POSTGRES_USER: "postgres"
+POSTGRES_PASSWORD: "postgres"
+DOCKER_REGISTRY_HOST: "192.168.2.99:8083"
+DOCKER_IMAGE_VERSION: "v1"
+DOCKER_IMAGE_VOTE: "eva-docker-release/vote"
+DOCKER_IMAGE_RESULT: "eva-docker-release/result"
+DOCKER_IMAGE_WORKER: "eva-docker-release/worker"
