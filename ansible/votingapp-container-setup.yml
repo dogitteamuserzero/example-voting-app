@@ -1,7 +1,5 @@
 ---
 - name: Deploy containers
-  become: yes
-
   tasks:
     - name: Include vars
       include_vars:
