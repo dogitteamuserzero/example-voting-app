@@ -1,5 +1,6 @@
 ---
 - name: Deploy containers
+  hosts: all
   tasks:
     - name: Include vars
       include_vars:
