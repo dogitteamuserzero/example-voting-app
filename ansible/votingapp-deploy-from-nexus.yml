@@ -4,7 +4,7 @@
   tasks:
     - name: Include vars
       include_vars:
-        dir: vars
+        dir: vars_nexus
 
     - name: Make dir
       file:
@@ -13,7 +13,7 @@
 
     - name: Copy DC file
       template:
-        src: templates/docker-compose-nexus.j2
+        src: templates/docker-compose.j2
         dest: /tmp/votingapp/docker-compose.yml
         force: yes
 
