@@ -1,4 +1,0 @@
-appsrv01 ansible_host=app ansible_user=vagrant
-
-[appsrvgrp]
-appsrv01
