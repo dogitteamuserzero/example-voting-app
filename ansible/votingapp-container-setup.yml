@@ -1,6 +1,5 @@
 ---
 - name: Deploy containers
-  hosts: appsrvgrp       
   become: yes
 
   tasks:
