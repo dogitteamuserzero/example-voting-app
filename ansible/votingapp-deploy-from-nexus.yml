@@ -1,5 +1,6 @@
 ---
 - name: Deploy containers
+  become: yes
   hosts: all
   tasks:
     - name: Include vars
