@@ -1,4 +1,5 @@
 node {
+  
   stage('SCM') {
     checkout scm
   }
@@ -11,15 +12,13 @@ node {
 
   stage('Deploy to Env'){
     steps {
-          ansiblePlaybook playbook: 'ansible/votingapp-deploy-from-nexus.yml', inventory: 'ansible/site.yml', credentialsId: ANSIBLE_CRED_ID, hostKeyChecking: false,
+          ansiblePlaybook playbook: 'ansible/votingapp-deploy-from-nexus.yml', inventory: 'ansible/site.yml', credentialsId: 'vagrant', hostKeyChecking: false,
             extraVars: [
-              nexusip: NEXUS_IP,
-              nexusport: NEXUS_PORT,
-              reponame: NEXUS_REPOSITORY,
-              groupid: NEXUS_GROUP,
-              vprofile_version: VERSION,
-              artifactId: ARTIFACT_ID
+              nexusip: '192.168.3.96',
+              nexusport: '8083',
+              reponame: 'eva-docker-release',
+              version: "${env.BUILD_TIMESTAMP}-${env.BUILD_ID}"
             ]
     }
-}
+  }
 }
