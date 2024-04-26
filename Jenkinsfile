@@ -11,7 +11,6 @@ node {
   }
 
   stage('Deploy to Env'){
-    steps {
           ansiblePlaybook playbook: 'ansible/votingapp-deploy-from-nexus.yml', inventory: 'ansible/site.yml', credentialsId: 'vagrant', hostKeyChecking: false,
             extraVars: [
               nexusip: '192.168.3.96',
@@ -19,6 +18,5 @@ node {
               reponame: 'eva-docker-release',
               version: "${env.BUILD_TIMESTAMP}-${env.BUILD_ID}"
             ]
-    }
   }
 }
