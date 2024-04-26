@@ -11,7 +11,7 @@ node {
   }
 
   stage('Deploy to Env'){
-          ansiblePlaybook playbook: 'ansible/votingapp-deploy-from-nexus.yml', inventory: 'ansible/site.yml', credentialsId: 'vagrant', hostKeyChecking: false,
+          ansiblePlaybook playbook: 'ansible/votingapp-deploy-from-nexus.yml', inventory: 'ansible/site.yml', credentialsId: 'vagrantssh', hostKeyChecking: false,
             extraVars: [
               nexusip: '192.168.3.96',
               nexusport: '8083',
