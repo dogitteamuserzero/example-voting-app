@@ -20,25 +20,11 @@
 
     - name: Stop vote docker containers
       shell:
-        cmd: docker stop $(docker ps --filter name=vote* -aq)
+        cmd: docker stop $(docker ps --filter name=votingapp* -aq)
       ignore_errors: true
       tags:
         - docker-cleanup
 
-    - name: Stop result docker containers
-      shell:
-        cmd: docker stop $(docker ps --filter name=result* -aq)
-      ignore_errors: true
-      tags:
-        - docker-cleanup
-
-    - name: Stop worker docker containers
-      shell:
-        cmd: docker stop $(docker ps --filter name=worker* -aq)
-      ignore_errors: true
-      tags:
-        - docker-cleanup
-        
     - name: Setup with docker-compose
       shell:
         cmd: docker-compose up -d
