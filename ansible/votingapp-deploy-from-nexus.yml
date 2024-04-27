@@ -20,11 +20,25 @@
 
     - name: Stop all docker containers
       shell:
-        cmd: docker stop $(docker ps --filter name=eva_* -aq)
+        cmd: docker stop $(docker ps --filter name=vote* -aq)
       ignore_errors: true
       tags:
         - docker-cleanup
 
+    - name: Stop all docker containers
+      shell:
+        cmd: docker stop $(docker ps --filter name=result* -aq)
+      ignore_errors: true
+      tags:
+        - docker-cleanup
+
+    - name: Stop all docker containers
+      shell:
+        cmd: docker stop $(docker ps --filter name=worker* -aq)
+      ignore_errors: true
+      tags:
+        - docker-cleanup
+        
     - name: Remove all unused and dangling docker images
       shell:
         cmd: docker system prune --all --force
