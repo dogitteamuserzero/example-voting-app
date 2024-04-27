@@ -18,33 +18,27 @@
         dest: /tmp/votingapp/docker-compose.yml
         force: yes
 
-    - name: Stop all docker containers
+    - name: Stop vote docker containers
       shell:
         cmd: docker stop $(docker ps --filter name=vote* -aq)
       ignore_errors: true
       tags:
         - docker-cleanup
 
-    - name: Stop all docker containers
+    - name: Stop result docker containers
       shell:
         cmd: docker stop $(docker ps --filter name=result* -aq)
       ignore_errors: true
       tags:
         - docker-cleanup
 
-    - name: Stop all docker containers
+    - name: Stop worker docker containers
       shell:
         cmd: docker stop $(docker ps --filter name=worker* -aq)
       ignore_errors: true
       tags:
         - docker-cleanup
         
-    - name: Remove all unused and dangling docker images
-      shell:
-        cmd: docker system prune --all --force
-      tags:
-        - docker-cleanup
-
     - name: Setup with docker-compose
       shell:
         cmd: docker-compose up -d
