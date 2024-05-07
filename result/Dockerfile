@@ -1,5 +1,8 @@
 FROM node:18-slim
 
+LABEL "Project"="DEVOPS2404/Unclewowa"
+LABEL "Author"="Antropov Vladimir" 
+
 # add curl for healthcheck
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \

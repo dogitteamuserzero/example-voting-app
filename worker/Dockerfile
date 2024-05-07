@@ -7,6 +7,11 @@
 # for example, if you were on Intel (amd64) and wanted to build for ARM, you would use:
 # docker buildx build --platform "linux/arm64/v8" .
 FROM --platform=${BUILDPLATFORM} mcr.microsoft.com/dotnet/sdk:7.0 as build
+
+LABEL "Project"="DEVOPS2404/Unclewowa"
+LABEL "Author"="Antropov Vladimir"
+
+
 ARG TARGETPLATFORM
 ARG BUILDPLATFORM
 RUN echo "I am running on $BUILDPLATFORM, building for $TARGETPLATFORM"
@@ -32,6 +37,9 @@ RUN  case ${TARGETPLATFORM} in \
 
 # app image
 FROM mcr.microsoft.com/dotnet/runtime:7.0
+LABEL "Project"="DEVOPS2404/Unclewowa"
+LABEL "Author"="Antropov Vladimir"
+
 WORKDIR /app
 COPY --from=build /app .
 ENTRYPOINT ["dotnet", "Worker.dll"]
